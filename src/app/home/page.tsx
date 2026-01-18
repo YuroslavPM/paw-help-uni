@@ -57,14 +57,16 @@ export default function HomePage() {
                                 </span>
                                 Добави
                             </button>
-                            <div
-                                className="bg-center bg-no-repeat bg-cover rounded-full size-12 border-2 border-white shadow-sm cursor-pointer"
-                                data-alt="User profile picture of Sarah"
-                                style={{
-                                    backgroundImage:
-                                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuC5LUmpsVAtTRc0N7vVRID5ZPdrw4lmhzLX2T3lnv3CrVJkjn3uOVWGD_kBadIjeLQGMUPMuo1N1o2khzrsPzDXNLqUGV05LXBX4VHDaTc8vfqS30JVvVisyZTUDO55NySzya0IwqGREKNILX-ihrwHyi-3w5LKOKcm64sgHUNCb-UlmARoa14kap52lq_rJ9Avf6ImHJQE2wtbZuvS-_T7hDDSXin2WeTVWq2EtlVC4Vet7bytxlvyexPTxRzkbDBD9TtjyMtVra8")',
-                                }}
-                            ></div>
+                            <Link href="/profile">
+                                <div
+                                    className="bg-center bg-no-repeat bg-cover rounded-full size-12 border-2 border-white shadow-sm cursor-pointer hover:ring-2 hover:ring-primary transition-all"
+                                    data-alt="User profile picture of Sarah"
+                                    style={{
+                                        backgroundImage:
+                                            'url("https://lh3.googleusercontent.com/aida-public/AB6AXuC5LUmpsVAtTRc0N7vVRID5ZPdrw4lmhzLX2T3lnv3CrVJkjn3uOVWGD_kBadIjeLQGMUPMuo1N1o2khzrsPzDXNLqUGV05LXBX4VHDaTc8vfqS30JVvVisyZTUDO55NySzya0IwqGREKNILX-ihrwHyi-3w5LKOKcm64sgHUNCb-UlmARoa14kap52lq_rJ9Avf6ImHJQE2wtbZuvS-_T7hDDSXin2WeTVWq2EtlVC4Vet7bytxlvyexPTxRzkbDBD9TtjyMtVra8")',
+                                    }}
+                                ></div>
+                            </Link>
                         </div>
                     </div>
                 </div>

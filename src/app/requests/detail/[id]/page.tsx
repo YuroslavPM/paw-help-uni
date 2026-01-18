@@ -76,14 +76,16 @@ export default function RequestDetailPage({
                         </Link>
                     </nav>
                     <div className="ml-6 flex items-center gap-4">
-                        <div
-                            className="size-12 rounded-full bg-cover bg-center ring-2 ring-white shadow-sm"
-                            data-alt="User profile picture"
-                            style={{
-                                backgroundImage:
-                                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMRUoa3FQ2MvneJO5R2uUC7Z_1RlfEsHtsI203eZS45u6ta5RiKRW5I8iyjbDzE86-pyEV53sxGHtcSaRdSu9v7EWYSxYCQwxo-z5g-V8rM76BmSSRMAO1dBVaJmuFpBLZOHtFJCBRkLnN6K3bSRTHyuuwnQG0NTK8BczmZmv3mw8BuOnl55BAdVRVST-hqRJi1jXNFbDM1klc3Rfh8qeL47ImAwB6554hNUv4MjBgO_u3uceiQrJP6W1xbLlbItERCaaUrNk9uAk')",
-                            }}
-                        ></div>
+                        <Link href="/profile">
+                            <div
+                                className="size-12 rounded-full bg-cover bg-center ring-2 ring-white shadow-sm cursor-pointer hover:ring-2 hover:ring-primary transition-all"
+                                data-alt="User profile picture"
+                                style={{
+                                    backgroundImage:
+                                        "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMRUoa3FQ2MvneJO5R2uUC7Z_1RlfEsHtsI203eZS45u6ta5RiKRW5I8iyjbDzE86-pyEV53sxGHtcSaRdSu9v7EWYSxYCQwxo-z5g-V8rM76BmSSRMAO1dBVaJmuFpBLZOHtFJCBRkLnN6K3bSRTHyuuwnQG0NTK8BczmZmv3mw8BuOnl55BAdVRVST-hqRJi1jXNFbDM1klc3Rfh8qeL47ImAwB6554hNUv4MjBgO_u3uceiQrJP6W1xbLlbItERCaaUrNk9uAk')",
+                                }}
+                            ></div>
+                        </Link>
                     </div>
                 </div>
             </header>

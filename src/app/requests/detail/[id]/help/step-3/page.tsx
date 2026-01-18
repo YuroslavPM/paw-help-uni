@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { use } from "react";
+import { use, useState } from "react";
+import { useRouter } from "next/navigation";
 import { requests } from "../../../../../../data/requests";
 
 export default function HelpStep3({
@@ -10,9 +11,18 @@ export default function HelpStep3({
     params: Promise<{ id: string }>;
 }) {
     const { id } = use(params);
+    const router = useRouter();
+    const [showSuccess, setShowSuccess] = useState(false);
     const request = requests.find((r) => r.id === id);
 
     if (!request) return null;
+
+    const handleConfirm = () => {
+        setShowSuccess(true);
+        setTimeout(() => {
+            router.push("/home");
+        }, 2500);
+    };
 
     return (
         <div className="bg-background-light min-h-screen flex flex-col font-display antialiased transition-colors duration-200">
@@ -152,7 +162,7 @@ export default function HelpStep3({
                                             <span className="material-symbols-outlined text-[16px]">
                                                 location_on
                                             </span>
-                                            <span className="text-xs font-bold text-shadow-sm">
+                                            <span className="text-xs font-bold text-text-shadow-sm">
                                                 {request.location}, Пловдив
                                             </span>
                                         </div>
@@ -160,7 +170,10 @@ export default function HelpStep3({
                                 </div>
                             </div>
                             <div className="px-8 pb-8 flex flex-col gap-4">
-                                <button className="w-full bg-primary hover:bg-[#74dcb8] active:scale-[0.98] transition-all duration-200 text-[#121715] font-bold text-xl rounded-xl py-4 shadow-[0_4px_14px_0_rgba(133,224,194,0.39)] flex items-center justify-center gap-2 cursor-pointer">
+                                <button
+                                    onClick={handleConfirm}
+                                    className="w-full bg-primary hover:bg-[#74dcb8] active:scale-[0.98] transition-all duration-200 text-[#121715] font-bold text-xl rounded-xl py-4 shadow-[0_4px_14px_0_rgba(133,224,194,0.39)] flex items-center justify-center gap-2 cursor-pointer"
+                                >
                                     <span>Потвърди</span>
                                     <span className="material-symbols-outlined text-[24px] font-bold">
                                         check_circle
@@ -198,6 +211,48 @@ export default function HelpStep3({
                     </div>
                 </main>
             </div>
+
+            {/* Success Modal */}
+            {showSuccess && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+                    <div className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-fade-in"></div>
+                    <div className="relative bg-white rounded-3xl p-8 max-w-sm w-full shadow-2xl animate-scale-in text-center overflow-hidden">
+                        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-primary/30 to-transparent -z-10"></div>
+                        <div className="mx-auto size-20 bg-primary/20 rounded-full flex items-center justify-center mb-6 text-primary-dark shadow-sm">
+                            <span className="material-symbols-outlined text-5xl animate-bounce">
+                                thumb_up
+                            </span>
+                        </div>
+                        <h2 className="text-2xl font-black text-[#121715] mb-2 leading-tight">
+                            Супер! <br /> Вие сте страхотни!
+                        </h2>
+                        <p className="text-text-muted font-medium mb-6">
+                            Благодарим ви за добрината. {request.postedBy.name} ще бъде уведомена веднага.
+                        </p>
+                        <div className="w-full bg-background-light h-1.5 rounded-full overflow-hidden">
+                            <div className="h-full bg-primary animate-progress-bar rounded-full"></div>
+                        </div>
+                        <p className="text-xs text-text-muted mt-3 font-semibold">Пренасочване към началото...</p>
+                    </div>
+                </div>
+            )}
+            <style jsx>{`
+                @keyframes fade-in {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                @keyframes scale-in {
+                    from { transform: scale(0.9); opacity: 0; }
+                    to { transform: scale(1); opacity: 1; }
+                }
+                @keyframes progress-bar {
+                    from { width: 0%; }
+                    to { width: 100%; }
+                }
+                .animate-fade-in { animation: fade-in 0.3s ease-out; }
+                .animate-scale-in { animation: scale-in 0.4s ease-out cubic-bezier(0.16, 1, 0.3, 1); }
+                .animate-progress-bar { animation: progress-bar 2.5s linear forwards; }
+            `}</style>
         </div>
     );
 }

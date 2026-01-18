@@ -10,7 +10,10 @@
   --color-surface-light: #ffffff;
   --color-input-light: #F7F1EA;
   --color-text-main: #121715;
-  --color-text-muted: #67837a;
+  --color-text-muted: #5c756d;
+  /* Updated color */
+  --color-warm-beige: #fffcf8;
+  --color-primary-dark: #6cd0af;
 
   /* Chat Specific Colors */
   --color-chat-primary: #4aa68d;

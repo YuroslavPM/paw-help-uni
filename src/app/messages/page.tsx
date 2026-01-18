@@ -99,7 +99,9 @@ export default function MessagesPage() {
                     <Link className="text-chat-primary font-bold border-b-2 border-chat-primary" href="/messages">Съобщения</Link>
                     <Link className="text-[#64748b] hover:text-chat-primary font-medium transition-colors" href="#">Общност</Link>
                 </div>
-                <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-gray-100 cursor-pointer hover:ring-chat-primary transition-all" data-alt="User" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuD1gk0WeW0ENdMcIQmTUtpplQFJg7W4MB7poF3JdPp0W8zp4-jl5oPBSj22BJQgaCKQBehSlYpbgxlzJHVgWi8Em_HS2m3HGYOTFHIvfv11tVJkK7d5jYKo1ctYykeiBLHmKAv4Nz5dHGPCSbOMoRtNYum3gzhvESdaxf_A4_OiqJHNZK_b_r2ZXCE0sGD4LO1vPFSO5oVvOYhMajytQ6oRZycRNMJb7OKqNeLSFBwuI0xSB9GMIi1mWzVYAlc5qvy7SvrToprPAww")' }}></div>
+                <Link href="/profile">
+                    <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-gray-100 cursor-pointer hover:ring-chat-primary transition-all" data-alt="User" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuD1gk0WeW0ENdMcIQmTUtpplQFJg7W4MB7poF3JdPp0W8zp4-jl5oPBSj22BJQgaCKQBehSlYpbgxlzJHVgWi8Em_HS2m3HGYOTFHIvfv11tVJkK7d5jYKo1ctYykeiBLHmKAv4Nz5dHGPCSbOMoRtNYum3gzhvESdaxf_A4_OiqJHNZK_b_r2ZXCE0sGD4LO1vPFSO5oVvOYhMajytQ6oRZycRNMJb7OKqNeLSFBwuI0xSB9GMIi1mWzVYAlc5qvy7SvrToprPAww")' }}></div>
+                </Link>
             </header>
 
             <div className="flex flex-1 overflow-hidden max-w-[1400px] mx-auto w-full md:py-6 md:px-6 gap-6">
