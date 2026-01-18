@@ -2,12 +2,24 @@
 
 @theme {
   --color-primary: #85e0c2;
-  --color-primary-hover: #6ddeb8;
+  --color-primary-hover: #6ED6B3;
+  --color-secondary: #69CCF7;
+  --color-accent: #F78269;
+  --color-accent-hover: #E0654C;
   --color-background-light: #f8f7f7;
   --color-surface-light: #ffffff;
   --color-input-light: #F7F1EA;
   --color-text-main: #121715;
-  --color-text-muted: #50665e;
+  --color-text-muted: #67837a;
+
+  /* Chat Specific Colors */
+  --color-chat-primary: #4aa68d;
+  --color-chat-primary-dark: #367d6a;
+  --color-chat-sender-light: #0f5e7f;
+  --color-chat-sender-dark: #0ea5e9;
+  --color-chat-receiver-light: #ffffff;
+  --color-chat-receiver-border: #cbd5e1;
+  --color-danger-soft: #d9534f;
 
   --font-display: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif;
   --font-body: var(--font-noto-sans), "Noto Sans", sans-serif;
@@ -18,7 +30,11 @@
   --radius-2xl: 2rem;
   --radius-full: 9999px;
 
-  --shadow-soft: 0 8px 40px -12px rgba(0, 0, 0, 0.08);
+  --shadow-soft: 0 20px 40px -10px rgba(133, 224, 194, 0.15);
+}
+
+.ambient-bg {
+  background: radial-gradient(circle at 50% 0%, rgba(133, 224, 194, 0.15) 0%, rgba(248, 247, 247, 0) 50%);
 }
 
 /* Custom Scrollbar */
