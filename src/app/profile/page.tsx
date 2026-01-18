@@ -2,41 +2,12 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Header from "../../components/Header";
 
 export default function ProfilePage() {
     return (
         <div className="bg-background-light min-h-screen flex flex-col font-display text-text-main antialiased overflow-x-hidden">
-            <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#f1f4f3]">
-                <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex items-center justify-between h-24">
-                        <Link href="/home" className="flex items-center gap-4">
-                            <div className="bg-primary/20 p-3 rounded-2xl text-primary-dark">
-                                <span className="material-symbols-outlined text-4xl">pets</span>
-                            </div>
-                            <h2 className="text-2xl font-bold tracking-tight text-text-main">PawHelp</h2>
-                        </Link>
-                        <div className="hidden md:flex flex-1 max-w-lg mx-12">
-                            <div className="relative w-full group">
-                                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-text-muted group-focus-within:text-primary-dark transition-colors">
-                                    <span className="material-symbols-outlined text-2xl">search</span>
-                                </div>
-                                <input className="block w-full pl-12 pr-4 py-3.5 border-none rounded-2xl bg-[#f1f4f3] text-lg text-text-main placeholder-text-muted focus:ring-2 focus:ring-primary/50 transition-all shadow-inner outline-none" placeholder="Търси възможности..." type="text" />
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-8">
-                            <nav className="hidden md:flex gap-8">
-                                <Link className="text-base font-semibold text-text-muted hover:text-primary-dark transition-colors" href="/home">Намери помощ</Link>
-                                <Link className="text-base font-semibold text-text-muted hover:text-primary-dark transition-colors" href="/messages">Доброволци</Link>
-                                <Link className="text-base font-semibold text-text-muted hover:text-primary-dark transition-colors" href="/messages">Общност</Link>
-                            </nav>
-                            <div className="flex items-center gap-4 pl-8 border-l-2 border-gray-100">
-                                <span className="text-base font-bold text-right hidden sm:block">Сара Дж.</span>
-                                <div className="w-12 h-12 rounded-full bg-cover bg-center border-2 border-white shadow-md cursor-pointer hover:ring-2 hover:ring-primary transition-all" data-alt="User profile thumbnail showing a smiling woman" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjdBYgBVIEcegswCmvL9marhD3aJgOheY3sTC849fueWJXwzDLrbRgNorGk62QeqB9qrMVGZSvK8RlP8vgCtLgl51vNTL1ScW9g3RkI2dNjWhNYGQ4ZZENTq01_tAEa-0gcHiX2Ig9N_z9974nlP23xtyT1NyTkQzS9yCPkYUU1ySLED1vECHnaoP6NyGK66LaYaTmnAXtoKWWAZ618M7sRPB2uXDPsFfioDyiK3zO3pbeGEjk9FnZm5PcSt3kLK3HQeHIzeVvBkY")' }}></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
+            <Header />
             <main className="flex-grow max-w-[1280px] mx-auto w-full px-4 sm:px-6 lg:px-8 py-10">
                 <div className="mb-8">
                     <h1 className="text-3xl font-extrabold text-text-main">Моят профил</h1>

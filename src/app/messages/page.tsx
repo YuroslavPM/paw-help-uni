@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
+import Header from "../../components/Header";
 
 interface Message {
     id: string;
@@ -84,25 +85,7 @@ export default function MessagesPage() {
     return (
         <div className="bg-background-light h-screen flex flex-col font-display text-[#121715] overflow-hidden transition-colors duration-200">
             {/* Header */}
-            <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#dce1e0] bg-surface-light px-6 md:px-10 py-3 shrink-0 z-10 shadow-sm relative">
-                <Link href="/home" className="flex items-center gap-3 text-[#121715]">
-                    <div className="size-8 text-chat-primary">
-                        <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                            <path clipRule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fillRule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <h2 className="text-[#121715] text-xl font-bold leading-tight tracking-[-0.015em]">PawHelp</h2>
-                </Link>
-                <div className="hidden md:flex flex-1 justify-center gap-8 absolute left-1/2 -translate-x-1/2">
-                    <Link className="text-[#64748b] hover:text-chat-primary font-medium transition-colors" href="/home">Начало</Link>
-                    <Link className="text-[#64748b] hover:text-chat-primary font-medium transition-colors" href="/map">Карта</Link>
-                    <Link className="text-chat-primary font-bold border-b-2 border-chat-primary" href="/messages">Съобщения</Link>
-                    <Link className="text-[#64748b] hover:text-chat-primary font-medium transition-colors" href="#">Общност</Link>
-                </div>
-                <Link href="/profile">
-                    <div className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-gray-100 cursor-pointer hover:ring-chat-primary transition-all" data-alt="User" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuD1gk0WeW0ENdMcIQmTUtpplQFJg7W4MB7poF3JdPp0W8zp4-jl5oPBSj22BJQgaCKQBehSlYpbgxlzJHVgWi8Em_HS2m3HGYOTFHIvfv11tVJkK7d5jYKo1ctYykeiBLHmKAv4Nz5dHGPCSbOMoRtNYum3gzhvESdaxf_A4_OiqJHNZK_b_r2ZXCE0sGD4LO1vPFSO5oVvOYhMajytQ6oRZycRNMJb7OKqNeLSFBwuI0xSB9GMIi1mWzVYAlc5qvy7SvrToprPAww")' }}></div>
-                </Link>
-            </header>
+            <Header />
 
             <div className="flex flex-1 overflow-hidden max-w-[1400px] mx-auto w-full md:py-6 md:px-6 gap-6">
                 {/* Sidebar */}

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { requests } from "../../data/requests";
+import Header from "../../components/Header";
 
 export default function MapPage() {
     const [selectedRequestId, setSelectedRequestId] = useState<string | null>(null);
@@ -11,65 +12,7 @@ export default function MapPage() {
 
     return (
         <div className="bg-background-light min-h-screen flex flex-col font-display antialiased overflow-hidden">
-            <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-[#f1f4f3] transition-colors duration-200">
-                <div className="max-w-[1200px] mx-auto px-4 md:px-8 py-4">
-                    <div className="flex items-center justify-between gap-4">
-                        <Link href="/home" className="flex items-center gap-3">
-                            <div className="size-10 text-primary flex items-center justify-center bg-primary/20 rounded-full p-2">
-                                <span className="material-symbols-outlined text-[24px] font-bold">
-                                    pets
-                                </span>
-                            </div>
-                            <h2 className="text-2xl font-bold tracking-tight text-[#121715]">
-                                PawHelp
-                            </h2>
-                        </Link>
-                        <div className="hidden md:flex items-center gap-8">
-                            <nav className="flex items-center gap-8">
-                                <Link
-                                    className="text-[#67837a] text-base font-semibold hover:text-primary transition-colors flex items-center gap-2"
-                                    href="/home"
-                                >
-                                    <span className="material-symbols-outlined text-[24px]">
-                                        home
-                                    </span>
-                                    Начало
-                                </Link>
-                                <Link
-                                    className="text-[#121715] text-base font-bold hover:text-primary transition-colors flex items-center gap-2"
-                                    href="/map"
-                                >
-                                    <span className="material-symbols-outlined text-[24px]">
-                                        map
-                                    </span>
-                                    Карта
-                                </Link>
-                                <Link
-                                    className="text-[#67837a] text-base font-semibold hover:text-primary transition-colors flex items-center gap-2"
-                                    href="/messages"
-                                >
-                                    <span className="material-symbols-outlined text-[24px]">
-                                        chat_bubble
-                                    </span>
-                                    Съобщения
-                                </Link>
-                            </nav>
-                        </div>
-                        <div className="flex items-center gap-4">
-                            <Link href="/profile">
-                                <div
-                                    className="bg-center bg-no-repeat bg-cover rounded-full size-12 border-2 border-white shadow-sm cursor-pointer hover:ring-2 hover:ring-primary transition-all"
-                                    data-alt="User profile picture of Sarah"
-                                    style={{
-                                        backgroundImage:
-                                            'url("https://lh3.googleusercontent.com/aida-public/AB6AXuC5LUmpsVAtTRc0N7vVRID5ZPdrw4lmhzLX2T3lnv3CrVJkjn3uOVWGD_kBadIjeLQGMUPMuo1N1o2khzrsPzDXNLqUGV05LXBX4VHDaTc8vfqS30JVvVisyZTUDO55NySzya0IwqGREKNILX-ihrwHyi-3w5LKOKcm64sgHUNCb-UlmARoa14kap52lq_rJ9Avf6ImHJQE2wtbZuvS-_T7hDDSXin2WeTVWq2EtlVC4Vet7bytxlvyexPTxRzkbDBD9TtjyMtVra8")',
-                                    }}
-                                ></div>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </header>
+            <Header />
 
             <main className="flex-1 relative w-full h-full overflow-hidden">
                 <div

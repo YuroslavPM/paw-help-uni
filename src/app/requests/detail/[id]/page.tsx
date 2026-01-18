@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { use } from "react";
 import { requests } from "../../../../data/requests";
+import Header from "../../../../components/Header";
 
 export default function RequestDetailPage({
     params,
@@ -29,66 +30,7 @@ export default function RequestDetailPage({
 
     return (
         <div className="bg-background-light min-h-screen flex flex-col font-display text-text-main text-lg transition-colors duration-200">
-            <header className="sticky top-0 z-50 bg-surface-light/90 backdrop-blur-md border-b border-gray-100 px-6 py-4">
-                <div className="max-w-7xl mx-auto flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                        <div className="size-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary-dark">
-                            <span className="material-symbols-outlined filled text-4xl text-[#121715]">
-                                pets
-                            </span>
-                        </div>
-                        <h2 className="text-[#121715] text-2xl font-bold tracking-tight">
-                            PawHelp
-                        </h2>
-                    </div>
-                    <div className="hidden md:flex flex-1 max-w-lg mx-8">
-                        <div className="relative w-full group">
-                            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                <span className="material-symbols-outlined text-text-muted text-2xl">
-                                    search
-                                </span>
-                            </div>
-                            <input
-                                className="block w-full pl-12 pr-4 py-3 border-none rounded-xl bg-background-light text-base placeholder-text-muted focus:ring-2 focus:ring-primary/50 transition-all outline-none"
-                                placeholder="Търси молби, помощ или доброволци..."
-                                type="text"
-                            />
-                        </div>
-                    </div>
-                    <nav className="hidden md:flex items-center gap-8">
-                        <Link
-                            className="text-base font-bold text-text-main hover:text-primary transition-colors"
-                            href="/map"
-                        >
-                            Карта
-                        </Link>
-                        <Link
-                            className="text-base font-bold text-text-muted hover:text-primary transition-colors"
-                            href="/messages"
-                        >
-                            Доброволци
-                        </Link>
-                        <Link
-                            className="text-base font-bold text-text-muted hover:text-primary transition-colors"
-                            href="/messages"
-                        >
-                            Общност
-                        </Link>
-                    </nav>
-                    <div className="ml-6 flex items-center gap-4">
-                        <Link href="/profile">
-                            <div
-                                className="size-12 rounded-full bg-cover bg-center ring-2 ring-white shadow-sm cursor-pointer hover:ring-2 hover:ring-primary transition-all"
-                                data-alt="User profile picture"
-                                style={{
-                                    backgroundImage:
-                                        "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMRUoa3FQ2MvneJO5R2uUC7Z_1RlfEsHtsI203eZS45u6ta5RiKRW5I8iyjbDzE86-pyEV53sxGHtcSaRdSu9v7EWYSxYCQwxo-z5g-V8rM76BmSSRMAO1dBVaJmuFpBLZOHtFJCBRkLnN6K3bSRTHyuuwnQG0NTK8BczmZmv3mw8BuOnl55BAdVRVST-hqRJi1jXNFbDM1klc3Rfh8qeL47ImAwB6554hNUv4MjBgO_u3uceiQrJP6W1xbLlbItERCaaUrNk9uAk')",
-                                }}
-                            ></div>
-                        </Link>
-                    </div>
-                </div>
-            </header>
+            <Header />
             <main className="flex-grow px-4 py-8 md:px-8 lg:py-12">
                 <div className="max-w-6xl mx-auto">
                     <nav className="flex items-center gap-2 mb-8 text-base text-text-muted">
