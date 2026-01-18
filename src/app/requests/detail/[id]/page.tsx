@@ -58,9 +58,9 @@ export default function RequestDetailPage({
                     <nav className="hidden md:flex items-center gap-8">
                         <Link
                             className="text-base font-bold text-text-main hover:text-primary transition-colors"
-                            href="#"
+                            href="/map"
                         >
-                            Молби
+                            Карта
                         </Link>
                         <Link
                             className="text-base font-bold text-text-muted hover:text-primary transition-colors"

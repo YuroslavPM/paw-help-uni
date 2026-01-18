@@ -1,7 +1,7 @@
 export interface Request {
     id: string;
     title: string;
-    cardTitle?: string; // Optional title for the card if different from main title
+    cardTitle?: string;
     category: "Разходка на куче" | "Пазаруване" | "Транспорт" | "Временен дом" | "Помощ в градината";
     categoryIcon: string;
     urgency: "Normal" | "Urgent";
@@ -22,6 +22,10 @@ export interface Request {
         title: string;
         subtitle: string;
     }[];
+    mapPosition: {
+        top: string;
+        left: string;
+    };
 }
 
 export const requests: Request[] = [
@@ -31,7 +35,7 @@ export const requests: Request[] = [
         title: "Нужен е транспорт за Бакстър до ветеринаря",
         category: "Разходка на куче",
         categoryIcon: "pets",
-        urgency: "Urgent", // Changed to Urgent based on details page
+        urgency: "Urgent",
         distance: "0.8 км",
         description: "Бакстър е моят 8-годишен голдън ретривър. Обикновено е пълен с енергия, но напоследък има затруднения да ходи със задните си крака. Имам записан час за ветеринар този следобед в клиниката в центъра.\n\nЗа съжаление, колата ми е на ремонт, а Бакстър е твърде тежък (около 40 кг), за да го вдигна сама безопасно. Търся някой с по-ниска кола или рампа, който може да ни помогне с транспорта. Ще покрия разходите за гориво!",
         postedBy: {
@@ -48,7 +52,8 @@ export const requests: Request[] = [
             { icon: "directions_car", title: "Голям автомобил", subtitle: "Комби, Ван или кола с рампа" },
             { icon: "fitness_center", title: "Помощ при вдигане", subtitle: "Бакстър е тежък и има нужда от подкрепа" },
             { icon: "schedule", title: "Двупосочен курс", subtitle: "~2 часа общо време" },
-        ]
+        ],
+        mapPosition: { top: "40%", left: "30%" }
     },
     {
         id: "2",
@@ -71,7 +76,8 @@ export const requests: Request[] = [
         needs: [
             { icon: "shopping_cart", title: "Списък с покупки", subtitle: "Около 10 артикула" },
             { icon: "credit_card", title: "Плащане", subtitle: "В брой при доставка" }
-        ]
+        ],
+        mapPosition: { top: "55%", left: "60%" }
     },
     {
         id: "3",
@@ -93,7 +99,8 @@ export const requests: Request[] = [
         location: "Квартал Изток",
         needs: [
             { icon: "directions_car", title: "Транспорт", subtitle: "Нужен е багажник за количка" }
-        ]
+        ],
+        mapPosition: { top: "25%", left: "45%" }
     },
     {
         id: "4",
@@ -116,7 +123,8 @@ export const requests: Request[] = [
         needs: [
             { icon: "home", title: "Пространство", subtitle: "Топла стая" },
             { icon: "pets", title: "Храна осигурена", subtitle: "" }
-        ]
+        ],
+        mapPosition: { top: "70%", left: "20%" }
     },
     {
         id: "5",
@@ -139,6 +147,7 @@ export const requests: Request[] = [
         needs: [
             { icon: "yard", title: "Косене", subtitle: "Тревата е висока" },
             { icon: "cleaning_services", title: "Извозване", subtitle: "На отпадъци" }
-        ]
+        ],
+        mapPosition: { top: "60%", left: "80%" }
     }
 ];

@@ -95,7 +95,7 @@ export default function MessagesPage() {
                 </Link>
                 <div className="hidden md:flex flex-1 justify-center gap-8 absolute left-1/2 -translate-x-1/2">
                     <Link className="text-[#64748b] hover:text-chat-primary font-medium transition-colors" href="/home">Начало</Link>
-                    <Link className="text-[#64748b] hover:text-chat-primary font-medium transition-colors" href="#">Заявки</Link>
+                    <Link className="text-[#64748b] hover:text-chat-primary font-medium transition-colors" href="/map">Карта</Link>
                     <Link className="text-chat-primary font-bold border-b-2 border-chat-primary" href="/messages">Съобщения</Link>
                     <Link className="text-[#64748b] hover:text-chat-primary font-medium transition-colors" href="#">Общност</Link>
                 </div>

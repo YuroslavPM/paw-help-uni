@@ -32,7 +32,7 @@ export default function HomePage() {
                                 </Link>
                                 <Link
                                     className="text-[#67837a] text-base font-semibold hover:text-primary transition-colors flex items-center gap-2"
-                                    href="#"
+                                    href="/map"
                                 >
                                     <span className="material-symbols-outlined text-[24px]">
                                         map
