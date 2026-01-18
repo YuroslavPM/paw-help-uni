@@ -246,6 +246,7 @@ export default function MessagesPage() {
                         ))}
                         <div ref={messagesEndRef} />
                     </div>
+                    {/* Vercel */}
 
                     {/* Input Area */}
                     <div className="p-4 bg-white border-t border-gray-100">
